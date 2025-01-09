@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, rgb(253, 136, 2), rgb(216, 123, 8), rgb(244, 166, 48), rgb(241, 185, 101));
+    margin: 0;
+  }
+  
+  .emoji-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .emoji {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: float 2s infinite;
+  }
+  
+  .face {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #ffd700, #ffb400);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .eyes {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .eye {
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+  }
+  
+  .eye.heart {
+    background: red;
+    width: 18px;
+    height: 18px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 75%, 18% 100%, 0% 38%);
+  }
+  
+  .eye.wink {
+    width: 20px;
+    height: 5px;
+    background: black;
+    border-radius: 10px;
+  }
+  
+  .mouth {
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .mouth.happy {
+    background: black;
+    border-radius: 50%;
+  }
+  
+  .mouth.sad {
+    background: black;
+    border-radius: 50%;
+    transform: rotate(180deg);
+  }
+  
+  .mouth.surprised {
+    background: black;
+    border-radius: 50%;
+    height: 25px;
+  }
+  
+  .mouth.angry {
+    background: black;
+    border-radius: 50%;
+    width: 60px;
+    height: 15px;
+    transform: rotate(-20deg);
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .emoji:hover {
+    transform: scale(1.2);
+  }
+  
